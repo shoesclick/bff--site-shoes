@@ -1,8 +1,0 @@
-com\shoesclick\bff\site\shoes\controller\OrderApiImplTest.class
-com\shoesclick\bff\site\shoes\service\CustomerServiceTest.class
-com\shoesclick\bff\site\shoes\ApplicationTests.class
-com\shoesclick\bff\site\shoes\controller\ProductApiImplTest.class
-com\shoesclick\bff\site\shoes\service\OrderServiceTest.class
-com\shoesclick\bff\site\shoes\service\ProductServiceTest.class
-com\shoesclick\bff\site\shoes\controller\CustomerApiImplTest.class
-com\shoesclick\bff\site\shoes\service\AbstractServiceTest.class
