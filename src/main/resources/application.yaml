@@ -42,12 +42,6 @@ feign:
         readTimeout: 5000
         loggerLevel: basic
 
-backend:
-  services:
-    customerUrl: http://localhost:8081/
-    productUrl: http://localhost:8082/
-    orderUrl: http://localhost:8083/
-
 eureka:
   client:
     serviceUrl:
