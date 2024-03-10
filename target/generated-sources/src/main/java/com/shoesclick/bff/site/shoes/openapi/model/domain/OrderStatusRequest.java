@@ -19,7 +19,7 @@ import jakarta.annotation.Generated;
  */
 
 @Schema(name = "OrderStatusRequest", description = "")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-03-09T11:02:37.025393900-03:00[America/Sao_Paulo]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-03-09T22:40:33.463755800-03:00[America/Sao_Paulo]")
 public class OrderStatusRequest {
 
   private Integer status;
