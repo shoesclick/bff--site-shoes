@@ -1,6 +1,6 @@
 server:
   servlet:
-    context-path: /bff/site
+    context-path: /bff--site-shoes
   port: 5000
 spring:
   application:
