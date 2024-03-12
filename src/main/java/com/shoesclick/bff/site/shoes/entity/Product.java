@@ -2,9 +2,12 @@ package com.shoesclick.bff.site.shoes.entity;
 
 import com.shoesclick.bff.site.shoes.enums.Category;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class Product {
+public final class Product implements Serializable {
+
+    public static long serialVersionUID = 1L;
 
     private Long id;
 

@@ -4,6 +4,8 @@ import java.util.List;
 
 public class ListProduct implements ListPage<Product> {
 
+  public static long serialVersionUID = 1L;
+
   private List<Product> content;
 
   private Pageable pageable;
