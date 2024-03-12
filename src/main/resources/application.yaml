@@ -19,7 +19,7 @@ spring:
     config:
       username: develop
       password: develop
-      name: "bff-site-shoes"
+      name: "bff--site-shoes"
       label: master
     retry:
       max-attempts: 5000
