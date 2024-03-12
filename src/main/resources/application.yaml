@@ -3,9 +3,8 @@ server:
     context-path: /bff--site-shoes
   port: 5000
 spring:
-  devtools:
-    restart:
-      enabled: false
+  cache:
+    type: redis
   application:
     name: bff--site-shoes
   profiles:

@@ -15,25 +15,27 @@ public class ProductService {
 
     private final ProductRepository productRepository;
 
+    private static final String CACHE_PRODUCT = "cache_product";
+
 
     public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
 
 
-    @Cacheable(value="filter_products", key="#filter.filter + '_' + #filter.page")
+    @Cacheable(value=CACHE_PRODUCT, key="#root.methodName + '_' + #filter.filter + '_' + #filter.page")
     @ReturnNullObject(ObjectReturnType.SPRING_PAGE)
     public ListProduct filter(Filter filter) {
         return productRepository.filter(filter);
     }
 
-    @Cacheable(value="all_products", key="#root.method.name")
+    @Cacheable(value=CACHE_PRODUCT, key = "#root.methodName")
     @ReturnNullObject(ObjectReturnType.SPRING_PAGE)
     public ListProduct listAll() {
         return productRepository.listAll();
     }
 
-    @Cacheable(value="find_product", key="#id")
+    @Cacheable(value=CACHE_PRODUCT, key="#root.methodName + '_' + #id")
     @ReturnNullObject(ObjectReturnType.OBJECT)
     public Product findById(Long id) {
         return productRepository.findById(id);

@@ -1,7 +1,12 @@
 package com.shoesclick.bff.site.shoes.entity;
 
-public class Pageable {
+import java.io.Serial;
+import java.io.Serializable;
 
+public class Pageable implements Serializable {
+
+  @Serial
+  private static final long serialVersionUID = -5420971654891230009L;
   private Integer pageNumber;
 
   private Integer pageSize;

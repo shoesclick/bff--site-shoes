@@ -14,8 +14,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import java.time.Duration;
-import java.util.Objects;
-
 
 @Configuration
 public class CacheConfig {
@@ -42,6 +40,7 @@ public class CacheConfig {
         RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
         redisTemplate.setConnectionFactory(redisConnectionFactory);
         redisTemplate.setKeySerializer(new StringRedisSerializer());
+        redisTemplate.setHashKeySerializer(new StringRedisSerializer());
         return redisTemplate;
     }
 
@@ -51,7 +50,12 @@ public class CacheConfig {
         return RedisCacheManager.builder()
                 .fromConnectionFactory(redisConnectionFactory())
                 .cacheDefaults(
-                        RedisCacheConfiguration.defaultCacheConfig().entryTtl(
+                        RedisCacheConfiguration
+                                .defaultCacheConfig(
+                                        Thread
+                                                .currentThread()
+                                                .getContextClassLoader())
+                                .entryTtl(
                                 Duration.ofHours(cacheProperties.ttlCache())
                         )
                 ).build();

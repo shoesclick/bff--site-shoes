@@ -1,6 +1,12 @@
 package com.shoesclick.bff.site.shoes.entity;
 
-public class Sort {
+import java.io.Serial;
+import java.io.Serializable;
+
+public class Sort implements Serializable {
+
+  @Serial
+  private static final long serialVersionUID = -3919151420320594245L;
 
   private Boolean empty;
 

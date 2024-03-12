@@ -1,10 +1,14 @@
 package com.shoesclick.bff.site.shoes.entity;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.List;
 
-public class ListProduct implements ListPage<Product> {
+public class ListProduct implements ListPage<Product>, Serializable {
 
-  public static long serialVersionUID = 1L;
+
+  @Serial
+  private static final long serialVersionUID = 8634645406498149722L;
 
   private List<Product> content;
 
