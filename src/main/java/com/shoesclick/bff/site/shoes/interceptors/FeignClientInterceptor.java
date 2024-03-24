@@ -1,4 +1,4 @@
-package com.shoesclick.bff.site.shoes.config;
+package com.shoesclick.bff.site.shoes.interceptors;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
