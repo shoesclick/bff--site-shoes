@@ -1,7 +1,7 @@
 server:
   servlet:
     context-path: /bff--site-shoes
-  port: 5600
+  port: 5000
 spring:
   cache:
     type: redis
@@ -57,7 +57,7 @@ logging:
 
 management:
   server:
-    port: 9690
+    port: 9090
   endpoints:
     web:
       base-path: /actuator
