@@ -4,7 +4,7 @@ metadata:
   name: svc-bff--site-shoes
   namespace: shoes-eks
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
       app: bff--site-shoes
   ports:
